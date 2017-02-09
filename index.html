@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GWLF model</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./assets/stylesheets/bulma.css" />
+    <link rel="stylesheet" href="./assets/stylesheets/font-awesome.min.css" />
+    <link rel="stylesheet" href="./src/stylesheets/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+
+<body>
+
+    <nav class="nav" style="background-color: cornflowerblue;">
+    <div class="nav-left">
+        <a class="nav-item">
+            <h1 class="title" style="color: white;">GWLF model</h1>
+        </a>
+    </div>
+    </nav>
+
+    <div class="tile is-ancestor">
+        <div class="tile is-4 is-vertical is-parent">
+            <div class="tile is-child box" style="background-color: ivory;">
+                <div id="app">
+
+                    <label class="label">CN2：</label>
+                    <p class="control">
+                        <input class="input" type="text" v-model="CN2">
+                    </p>
+                    <label class="label">退水係數：</label>
+                    <p class="control">
+                        <input class="input" type="text" v-model="r">
+                    </p>
+                    <label class="label">位置分區：</label>
+                    <p class="control">
+                        <span class="select">
+                        <select v-model="part">
+                          <option value = "1">北區</option>
+                          <option value = "2">中區</option>
+                          <option value = "3">南區</option>
+                          <option value = "4">中區</option>
+                        </select>
+                      </span>
+                    </p>
+                    <label class="label">最大根層含水量：</label>
+                    <p class="control">
+                        <input class="input" type="text" v-model="Ur">
+                    </p>
+                    <label class="label">淺層含水量：</label>
+                    <p class="control">
+                        <input class="input" type="text" v-model="U">
+                    </p>
+                    <label class="label">深層含水量：</label>
+                    <p class="control">
+                        <input class="input" type="text" v-model="S">
+                    </p>
+                    <label class="label">初始地下水出流量：</label>
+                    <p class="control">
+                        <input class="input" type="text" v-model="G">
+                    </p>
+
+                    <label class="label">解析檔案：</label>
+                    <p class="control">
+                        <input type="file" name="file" class="upload" v-on:change="readFile">
+                    </p>
+
+                    <div class="control is-grouped">
+                        <p class="control">
+                            <button class="button is-primary" v-on:click="cal">計算</button>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="tile is-parent">
+            <div class="tile is-child box">
+                <svg></svg>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="./assets/javascripts/vue.js"></script>
+    <script src="./assets/javascripts/d3.v4.min.js"></script>
+    <script src="./src/javascripts/GWLF.js"></script>
+    <script src="./src/javascripts/readFile.js"></script>
+    <script src="./src/javascripts/plot.js"></script>
+
+    <script src="./src/javascripts/app.js"></script>
+    
+</body>
+
+</html>
