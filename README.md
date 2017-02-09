@@ -1,6 +1,6 @@
 # GWLF model
 
 GWLF(General Watershed Loading Function) 
-¼ÒÀÀ¶°¤ô°Ï¤ô¶q¤ô½è¤ÀªR¼Ò¦¡
+æ¨¡æ“¬é›†æ°´å€æ°´é‡æ°´è³ªåˆ†ææ¨¡å¼
 
-[«eºİ¼ÒÀÀ¥X¹Ï](https://huskyhsu.github.io/GWLF-model/)
+[å‰ç«¯æ¨¡æ“¬å‡ºåœ–](https://huskyhsu.github.io/GWLF-model/)

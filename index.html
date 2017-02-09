@@ -21,8 +21,8 @@
     </nav>
 
     <div class="tile is-ancestor">
-        <div class="tile is-4 is-vertical is-parent">
-            <div class="tile is-child box" style="background-color: ivory;">
+        <div class="tile is-2 is-vertical is-parent">
+            <div class="tile is-child box table" style="background-color: ivory;">
                 <div id="app">
 
                     <label class="label">CN2：</label>
@@ -48,11 +48,11 @@
                     <p class="control">
                         <input class="input" type="text" v-model="Ur">
                     </p>
-                    <label class="label">淺層含水量：</label>
+                    <label class="label">初始淺層含水量：</label>
                     <p class="control">
                         <input class="input" type="text" v-model="U">
                     </p>
-                    <label class="label">深層含水量：</label>
+                    <label class="label">初始深層含水量：</label>
                     <p class="control">
                         <input class="input" type="text" v-model="S">
                     </p>
@@ -65,10 +65,11 @@
                     <p class="control">
                         <input type="file" name="file" class="upload" v-on:change="readFile">
                     </p>
+                    <a href="./test/曾文.csv" style="color: #22c65b;">測試資料下載</a>
 
                     <div class="control is-grouped">
                         <p class="control">
-                            <button class="button is-primary" v-on:click="cal">計算</button>
+                            <button class="button is-success" v-on:click="cal">計算</button>
                         </p>
                     </div>
 
@@ -76,7 +77,7 @@
             </div>
         </div>
         <div class="tile is-parent">
-            <div class="tile is-child box">
+            <div class="tile is-child box plot">
                 <svg></svg>
             </div>
         </div>
